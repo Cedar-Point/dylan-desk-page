@@ -7,23 +7,26 @@
         background-color:black; 
       }
     </style>
-    <script>
-      function reload() {
-         window.navigation.reload();
-      }
-      function fsReload() {
-        document.body.requestFullscreen();
-        window.navigation.reload();
-      }
-    </script>
   </head>
   <body>
+    <div id="counter"></div>
     <button onclick="fsReload()">[]</button>
     <h1>Dylan's Desk</h1>
     <hr/>
     <h3 style="color:red;">Closed</h3>
   </body>
   <script>
-    setInterval(reload, 60000);
+    var count = 60;
+    var counter = document.querySelector("#counter");
+    setInterval(function() {
+      counter.text = count--;
+      if (count == 0) {
+        fsReload();
+      }
+    }, 1000);
+    function fsReload() {
+      document.body.requestFullscreen();
+      window.navigation.reload();
+    }
   </script>
 </html>
