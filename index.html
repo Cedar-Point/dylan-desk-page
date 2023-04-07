@@ -2,6 +2,11 @@
 <html>
   <head>
     <style>
+      #counter {
+        position:absolute;
+        bottom:0px;
+        left:0px;
+      }
       body {
         color:white;
         background-color:black; 
@@ -26,7 +31,7 @@
     }, 1000);
     function fsReload() {
       document.body.requestFullscreen();
-      window.navigation.reload();
+      location.reload();
     }
   </script>
 </html>
