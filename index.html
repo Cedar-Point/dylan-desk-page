@@ -19,7 +19,7 @@
     var count = 60;
     var counter = document.querySelector("#counter");
     setInterval(function() {
-      counter.text = count--;
+      counter.innerHTML = count--;
       if (count == 0) {
         fsReload();
       }
