@@ -15,7 +15,7 @@
   </head>
   <body>
     <div id="counter"></div>
-    <button onclick="fsReload()">[]</button>
+    <button onclick="document.body.requestFullscreen()">[]</button>
     <h1>Dylan's Desk</h1>
     <hr/>
     <h3 style="color:red;">Closed</h3>
@@ -26,12 +26,8 @@
     setInterval(function() {
       counter.innerHTML = count--;
       if (count == 0) {
-        fsReload();
+        location.reload();
       }
     }, 1000);
-    function fsReload() {
-      document.body.requestFullscreen();
-      location.reload();
-    }
   </script>
 </html>
